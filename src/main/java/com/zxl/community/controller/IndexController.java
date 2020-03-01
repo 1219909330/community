@@ -6,13 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class HelloController {
-
-    @GetMapping("/hello")
-    public String hello(@RequestParam(name = "name") String name, Model model){
-
-        model.addAttribute("name",name);
-        return "hello";
+public class IndexController {
+/*
+* 斜杠代表着根目录,既相当于我任何都不输入的时候,默认访问路径index
+* */
+    @GetMapping("/")
+    public String index(){
+        return "index";
 
     }
 
